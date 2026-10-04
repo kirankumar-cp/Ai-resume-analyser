@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title description">
+  <title id="title">AI Resume Analyzer prototype architecture</title>
+  <desc id="description">The browser submits a PDF and job description to FastAPI. The backend extracts text and skills, calculates a match score, stores a summary in MongoDB, and returns results. The history page reads saved summaries from the API.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#4556c8"/>
+    </marker>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #172033; }
+      .title { font-size: 28px; font-weight: 700; }
+      .label { font-size: 19px; font-weight: 700; }
+      .copy { font-size: 15px; fill: #48536a; }
+      .small { font-size: 13px; fill: #59657c; }
+      .box { stroke: #d7ddea; stroke-width: 2; rx: 16; }
+      .arrow { stroke: #4556c8; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="480" fill="#f7f9fc" rx="20"/>
+  <text x="56" y="58" class="title">Analysis flow</text>
+  <text x="56" y="88" class="small">Local prototype · keyword matching · MongoDB history</text>
+
+  <rect x="54" y="145" width="235" height="210" class="box" fill="#ffffff"/>
+  <text x="78" y="184" class="label">Browser</text>
+  <text x="78" y="220" class="copy">Analysis page</text>
+  <text x="78" y="249" class="copy">PDF + job description</text>
+  <text x="78" y="293" class="copy">Displays score and skills</text>
+  <text x="78" y="322" class="copy">History page</text>
+
+  <path d="M289 250H365" class="arrow"/>
+  <text x="304" y="233" class="small">multipart</text>
+
+  <rect x="372" y="125" width="400" height="250" class="box" fill="#eef1ff"/>
+  <text x="400" y="164" class="label">FastAPI backend</text>
+  <text x="400" y="202" class="copy">1. Extract selectable PDF text</text>
+  <text x="400" y="232" class="copy">2. Find fixed-list skill keywords</text>
+  <text x="400" y="262" class="copy">3. Compare and calculate percentage</text>
+  <text x="400" y="292" class="copy">4. Save summary, return analysis</text>
+  <text x="400" y="340" class="small">POST /api/analyze · GET /api/history</text>
+
+  <path d="M772 212H866" class="arrow"/>
+  <text x="789" y="194" class="small">save summary</text>
+  <path d="M866 290H772" class="arrow"/>
+  <text x="793" y="318" class="small">read history</text>
+
+  <rect x="874" y="165" width="270" height="170" class="box" fill="#fff"/>
+  <text x="902" y="208" class="label">MongoDB</text>
+  <text x="902" y="245" class="copy">ai_resume_analyzer</text>
+  <text x="902" y="274" class="copy">analyses collection</text>
+  <text x="902" y="308" class="small">Local records; no raw PDF storage</text>
+
+  <path d="M560 375V414H168V355" class="arrow"/>
+  <text x="280" y="442" class="small">JSON result returns to the browser for display</text>
+</svg>

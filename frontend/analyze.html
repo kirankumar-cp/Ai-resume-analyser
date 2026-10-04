@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analyze Resume | AI Resume Analyzer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>AI</span> Resume Analyzer
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="analyze.html">Analyze Resume</a>
+            <a href="history.html">History</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ANALYSIS PAGE -->
+
+    <main class="analysis-page">
+
+        <div class="analysis-heading">
+
+            <span>AI RESUME ANALYSIS</span>
+
+            <h1>Analyze Your Resume</h1>
+
+            <p>
+                Upload your resume and provide the job description
+                to discover how well your profile matches the role.
+            </p>
+
+        </div>
+
+
+        <div class="analysis-container">
+
+
+            <!-- RESUME UPLOAD -->
+
+            <div class="analysis-card">
+
+                <h2>1. Upload Your Resume</h2>
+
+                <p class="card-description">
+                    Upload your resume in PDF format.
+                </p>
+
+                <div class="upload-box">
+
+                    <div class="upload-icon">
+                        📄
+                    </div>
+
+                    <h3>Drop your resume here</h3>
+
+                    <p>or choose a PDF file from your computer</p>
+
+                    <label for="resume">
+                        Choose Resume
+                    </label>
+
+                    <input
+                        type="file"
+                        id="resume"
+                        accept=".pdf"
+                    >
+
+                    <p id="file-name"></p>
+
+                </div>
+
+            </div>
+
+
+            <!-- JOB DESCRIPTION -->
+
+            <div class="analysis-card">
+
+                <h2>2. Job Description</h2>
+
+                <p class="card-description">
+                    Paste the job description for the position.
+                </p>
+
+                <textarea
+                    id="job-description"
+                    placeholder="Paste the job description here..."
+                ></textarea>
+
+                <div class="text-info">
+                    <span>Job requirements will be analyzed by AI.</span>
+                </div>
+
+            </div>
+
+
+            <!-- ANALYZE BUTTON -->
+
+            <div class="analyze-action">
+
+                <button id="analyze-btn">
+                    Analyze Resume
+                    <span>→</span>
+                </button>
+
+                <p>
+                    Your resume will be securely processed for analysis.
+                </p>
+
+            </div>
+
+
+            <!-- RESULT AREA -->
+
+            <div id="result-section" class="result-section">
+
+                <div class="result-header">
+
+                    <div>
+                        <span>ANALYSIS RESULT</span>
+                        <h2>Your Resume Analysis</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="result-grid">
+
+                    <div class="result-box">
+
+                        <h3>Match Score</h3>
+
+                        <strong id="match-score">
+                            --%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-box">
+
+                        <h3>Matching Skills</h3>
+
+                        <div id="matching-skills">
+                            Analysis pending...
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-box">
+
+                        <h3>Missing Skills</h3>
+
+                        <div id="missing-skills">
+                            Analysis pending...
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-box">
+
+                        <h3>Suggestions</h3>
+
+                        <div id="suggestions">
+                            Analysis pending...
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 AI Resume Analyzer | Python AI Project
+        </p>
+
+    </footer>
+
+
+    <script src="js/analyzer.js"></script>
+
+</body>
+
+</html>

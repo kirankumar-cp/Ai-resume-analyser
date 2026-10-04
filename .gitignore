@@ -1,0 +1,21 @@
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+
+# Uploaded resumes and other private user files
+uploads/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+*.log
